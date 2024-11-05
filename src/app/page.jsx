@@ -35,7 +35,7 @@ export default function Home() {
         </h1>
       </motion.div>
       <motion.div
-        className="flex flex-col gap-0 w-full lg:w-[40%]"
+        className="flex flex-col gap-0 w-[90%] lg:w-[40%]"
         animate={{
           y: [200, 0, 0],
           opacity: [0, 0.5, 1],
