@@ -35,7 +35,7 @@ export default function Home() {
         </h1>
       </motion.div>
       <motion.div
-        className="flex flex-col gap-0 w-[40%]"
+        className="flex flex-col gap-0 w-full lg:w-[40%]"
         animate={{
           y: [200, 0, 0],
           opacity: [0, 0.5, 1],
@@ -45,12 +45,12 @@ export default function Home() {
           ease: "easeInOut",
         }}
       >
-        <h1 className="text-4xl font-bold text-center text-white relative z-20 bg-clip-text text-transparent bg-gradient-to-br from-input-bg to-light">
+        <h1 className="text-2xl md:text-4xl font-bold text-center text-white relative z-20 bg-clip-text text-transparent bg-gradient-to-br from-input-bg to-light">
           Transform Your Language Learning with AI
         </h1>
       </motion.div>
       <motion.div
-        className="flex flex-col gap-8 w-[30%] items-center justify-center z-50"
+        className="flex flex-col gap-8 w-[80%] lg:w-[30%] items-center justify-center z-50"
         animate={{
           y: [300, 0, 0],
           opacity: [0, 0.5, 1],
@@ -60,7 +60,7 @@ export default function Home() {
           ease: "easeInOut",
         }}
       >
-        <div className="flex flex-row items-center justify-center gap-16 min-w-full w-full max-w-full">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-16 min-w-full w-full max-w-full">
           <div className="min-w-full w-full max-w-full relative">
             <div className="absolute inset-y-0 start-0 flex items-center ps-16 pointer-events-none">
               <EnvelopeIcon className="w-16 h-16 text-input-bg" />
@@ -74,12 +74,12 @@ export default function Home() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-input-bg border-input-border text-primary text-sm font-semibold rounded-main px-16 py-12 h-40 flex items-center justify-center whitespace-nowrap"
+            className="bg-input-bg border-input-border text-primary text-sm font-semibold rounded-main px-16 py-12 h-40 flex items-center justify-center whitespace-nowrap w-full md:w-fit"
           >
             <p className="text-md">Get Notified</p>
           </motion.button>
         </div>
-        <div className="flex flex-row gap-8">
+        <div className="flex flex-row gap-8 w-full min-w-full max-w-full whitespace-normal md:whitespace-nowrap text-center">
           <p className="text-md font-bold text-light">
             Created by -{" "}
             <Link
