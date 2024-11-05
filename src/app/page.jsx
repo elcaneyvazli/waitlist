@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="h-screen min-h-screen max-h-screen relative min-w-full w-full max-w-full bg-black flex flex-col items-center gap-16 justify-center overflow-hidden">
-      <div className="w-full absolute inset-0 h-screen">
+    <div className="h-[100dvh] min-h-[100dvh] max-h-[100dvh] relative min-w-full w-full max-w-full bg-black flex flex-col items-center gap-16 justify-center overflow-hidden">
+      <div className="w-full absolute inset-0 h-[100dvh]">
         <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
@@ -79,18 +79,18 @@ export default function Home() {
             <p className="text-md">Get Notified</p>
           </motion.button>
         </div>
-        <div className="flex flex-row gap-8 w-full min-w-full max-w-full whitespace-normal md:whitespace-nowrap text-center">
-          <p className="text-md font-bold text-light">
+        <div className="flex flex-row gap-8 whitespace-normal md:whitespace-nowrap text-center">
+          <p className="text-md font-bold text-light text-center">
             Created by -{" "}
             <Link
               href="https://www.linkedin.com/in/elcaneyvazli/"
-              className="text-md font-bold text-light"
+              className="text-md font-bold text-light text-center"
             >
               Elcan Eyvazlı
             </Link>{" "}
             <Link
               href="https://www.linkedin.com/in/ravan-asad/"
-              className="text-md font-bold text-light"
+              className="text-md font-bold text-light text-center"
             >
               Rəvan Əsədov
             </Link>
@@ -111,9 +111,9 @@ export default function Home() {
           opacity: { duration: 4, repeat: Infinity, ease: "easeInOut" },
         }}
       >
-        <div className="relative w-full h-screen min-h-screen max-h-screen">
+        <div className="relative w-full h-[100dvh] min-h-[100dvh] max-h-[100dvh]">
           <div
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300%] aspect-[2/1]"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300%] md:w-[300%] aspect-[2/1]"
             style={{
               background: `
                 radial-gradient(
@@ -128,7 +128,7 @@ export default function Home() {
           />
 
           <div
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[140%] aspect-[2/1]"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[200%] md:w-[140%] aspect-[2/1]"
             style={{
               background: `
                 radial-gradient(
@@ -143,7 +143,7 @@ export default function Home() {
           />
 
           <div
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[100%] aspect-[2/1]"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[160%] md:w-[100%] aspect-[2/1]"
             style={{
               background: `
                 radial-gradient(
