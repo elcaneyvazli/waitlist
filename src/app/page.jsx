@@ -1,11 +1,12 @@
 "use client";
 import { SparklesCore } from "@/component/sparkles";
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { EnvelopeIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="h-screen min-h-screen max-h-screen relative w-full bg-black flex flex-col items-center gap-16 justify-center overflow-hidden">
+    <div className="h-screen min-h-screen max-h-screen relative min-w-full w-full max-w-full bg-black flex flex-col items-center gap-16 justify-center overflow-hidden">
       <div className="w-full absolute inset-0 h-screen">
         <SparklesCore
           id="tsparticlesfullpage"
@@ -19,10 +20,25 @@ export default function Home() {
       </div>
 
       <motion.div
-        className="flex flex-col gap-0 w-[40%]"
+        className="flex w-fit h-fit px-16 py-4 border border-dark-input-border bg-primary rounded-full"
         animate={{
           y: [100, 0, 0],
-          opacity: [0, 0.8, 1],
+          opacity: [0, 0.5, 1],
+        }}
+        transition={{
+          duration: 2,
+          ease: "easeInOut",
+        }}
+      >
+        <h1 className="text-xs font-semibold text-center text-input-bg">
+          Welcome to Mindix
+        </h1>
+      </motion.div>
+      <motion.div
+        className="flex flex-col gap-0 w-[40%]"
+        animate={{
+          y: [200, 0, 0],
+          opacity: [0, 0.5, 1],
         }}
         transition={{
           duration: 2,
@@ -32,6 +48,54 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-center text-white relative z-20 bg-clip-text text-transparent bg-gradient-to-br from-input-bg to-light">
           Transform Your Language Learning with AI
         </h1>
+      </motion.div>
+      <motion.div
+        className="flex flex-col gap-8 w-[30%] items-center justify-center z-50"
+        animate={{
+          y: [300, 0, 0],
+          opacity: [0, 0.5, 1],
+        }}
+        transition={{
+          duration: 3,
+          ease: "easeInOut",
+        }}
+      >
+        <div className="flex flex-row items-center justify-center gap-16 min-w-full w-full max-w-full">
+          <div className="min-w-full w-full max-w-full relative">
+            <div className="absolute inset-y-0 start-0 flex items-center ps-16 pointer-events-none">
+              <EnvelopeIcon className="w-16 h-16 text-input-bg" />
+            </div>
+            <input
+              type="text"
+              placeholder={"Email"}
+              className="bg-dark-input-bg border border-dark-input-border text-input-bg text-sm rounded-[10px] focus:ring-input-border focus:border-input-border focus:outline-none block w-full ps-40 px-16 py-12 h-40"
+            />
+          </div>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-input-bg border-input-border text-primary text-sm font-semibold rounded-main px-16 py-12 h-40 flex items-center justify-center whitespace-nowrap"
+          >
+            <p className="text-md">Get Notified</p>
+          </motion.button>
+        </div>
+        <div className="flex flex-row gap-8">
+          <p className="text-md font-bold text-light">
+            Created by -{" "}
+            <Link
+              href="https://www.linkedin.com/in/elcaneyvazli/"
+              className="text-md font-bold text-light"
+            >
+              Elcan Eyvazlı
+            </Link>{" "}
+            <Link
+              href="https://www.linkedin.com/in/ravan-asad/"
+              className="text-md font-bold text-light"
+            >
+              Rəvan Əsədov
+            </Link>
+          </p>
+        </div>
       </motion.div>
       <motion.div
         className="absolute bottom-0 left-0 right-0 pointer-events-none"
