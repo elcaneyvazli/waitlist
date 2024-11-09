@@ -18,7 +18,6 @@ export default function Home() {
           particleColor="#9CA3AF"
         />
       </div>
-
       <motion.div
         className="flex w-fit h-fit px-16 py-4 border border-dark-input-border bg-primary rounded-full"
         animate={{
@@ -92,7 +91,7 @@ export default function Home() {
               href="https://www.linkedin.com/in/ravan-asad/"
               className="text-md font-bold text-light text-center"
             >
-              Rəvan Əsədov
+              Ravan Asad{" "}
             </Link>
           </p>
         </div>
