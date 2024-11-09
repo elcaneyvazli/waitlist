@@ -3,10 +3,12 @@ import { SparklesCore } from "@/component/sparkles";
 import { motion } from "framer-motion";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import Loading from "@/component/loading";
 
 export default function Home() {
   return (
     <div className="h-[100dvh] min-h-[100dvh] max-h-[100dvh] relative min-w-full w-full max-w-full bg-black flex flex-col items-center gap-16 justify-center overflow-hidden">
+      <Loading />
       <div className="w-full absolute inset-0 h-[100dvh]">
         <SparklesCore
           id="tsparticlesfullpage"
@@ -49,7 +51,7 @@ export default function Home() {
         </h1>
       </motion.div>
       <motion.div
-        className="flex flex-col gap-8 w-[80%] lg:w-[30%] items-center justify-center z-50"
+        className="flex flex-col gap-8 w-[80%] lg:w-[30%] items-center justify-center z-40"
         animate={{
           y: [300, 0, 0],
           opacity: [0, 0.5, 1],
