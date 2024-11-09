@@ -8,7 +8,7 @@ import Loading from "@/component/loading";
 export default function Home() {
   return (
     <div className="h-[100dvh] min-h-[100dvh] max-h-[100dvh] relative min-w-full w-full max-w-full bg-black flex flex-col items-center gap-16 justify-center overflow-hidden">
-      <Loading />
+      {/* <Loading /> */}
       <div className="w-full absolute inset-0 h-[100dvh]">
         <SparklesCore
           id="tsparticlesfullpage"
