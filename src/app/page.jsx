@@ -143,7 +143,7 @@ export default function Home() {
                 href="https://www.linkedin.com/in/elcaneyvazli/"
                 className="text-md font-bold text-light text-center"
               >
-                Elcan Eyvazlı
+                Elcan Eyvazli
               </Link>{" "}
               <Link
                 href="https://www.linkedin.com/in/ravan-asad/"
