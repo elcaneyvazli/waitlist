@@ -25,11 +25,11 @@ export default function Home() {
       const supabaseAnonKey = process.env.NEXT_PUBLIC_API_KEY_SUPABASEKEY;
 
       if (!supabaseUrl || !supabaseAnonKey) {
-        throw new Error('Missing Supabase credentials');
+        throw new Error("Missing Supabase credentials");
       }
 
       const supabase = createClient(supabaseUrl, supabaseAnonKey);
-      
+
       const { email } = data;
       const { error } = await supabase.from("Mail").insert([{ mail: email }]);
       if (error) {
@@ -145,6 +145,7 @@ export default function Home() {
               >
                 Elcan Eyvazli
               </Link>{" "}
+              &{" "}
               <Link
                 href="https://www.linkedin.com/in/ravan-asad/"
                 className="text-md font-bold text-light text-center"
