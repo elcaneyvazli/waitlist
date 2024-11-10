@@ -19,13 +19,17 @@ export default function Home() {
     resolver: yupResolver(EmailSchema),
   });
 
-  const supabaseUrl = process.env.NEXT_PUBLIC_API_KEY_SUPABASEURL;
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_API_KEY_SUPABASEKEY;
-
-  const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
   const handleSubmitEmail = async (data) => {
     try {
+      const supabaseUrl = process.env.NEXT_PUBLIC_API_KEY_SUPABASEURL;
+      const supabaseAnonKey = process.env.NEXT_PUBLIC_API_KEY_SUPABASEKEY;
+
+      if (!supabaseUrl || !supabaseAnonKey) {
+        throw new Error('Missing Supabase credentials');
+      }
+
+      const supabase = createClient(supabaseUrl, supabaseAnonKey);
+      
       const { email } = data;
       const { error } = await supabase.from("Mail").insert([{ mail: email }]);
       if (error) {
